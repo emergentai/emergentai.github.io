@@ -2,10 +2,9 @@
 
 export function Analytics() {
 	return (
-		// Does nothing as of now. Add Google Analytics here.
-		<script
-			src=""
-			async
-		/>
+		<>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-YNYXN5PL55"></script>
+		</>
+		
 	);
 }
