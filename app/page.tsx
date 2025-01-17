@@ -33,11 +33,15 @@ export default function Home() {
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-          powering your business with artificial intelligence
+          powering your business with artificial intelligence 
         </h2>
         <br/>
         <h2 className="text-sm text-zinc-500 ">
-          <strong><a href={NavigationRoutes.contact.href} >contact us now</a></strong>
+          <strong><a href="https://calendly.com/emergentai/intro" target="_blank" >talk to us</a></strong>
+        </h2>
+        <br/>
+        <h2 className="text-sm text-zinc-500">
+          made in 🇨🇦
         </h2>
       </div>
     </div>
