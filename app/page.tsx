@@ -1,9 +1,7 @@
 import React from "react";
 import Particles from "./components/particles";
-import { CapabilitiesSection } from "./components/sections/capabilities-section";
-import { CredibilitySection } from "./components/sections/credibility-section";
-import { EnhancedContactSection } from "./components/sections/enhanced-contact-section";
 import { Navigation } from "./components/navigation";
+import { SectionsWrapper } from "./components/sections-wrapper";
 
 export default function Home() {
   return (
@@ -25,14 +23,12 @@ export default function Home() {
           </h1>
 
           {/* Tagline */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-zinc-700 dark:text-zinc-300 mb-8 animate-fade-in animation-delay-300">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-zinc-700 dark:text-zinc-300 mb-8 opacity-0 animate-fade-in animation-delay-1200">
             AI Solutions That Actually Work for Your Business
           </h2>
 
-
-
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in animation-delay-500">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 opacity-0 animate-fade-in animation-delay-1500">
             <a
               href="https://calendly.com/emergentai/intro"
               target="_blank"
@@ -50,31 +46,16 @@ export default function Home() {
           </div>
 
           {/* Simple Trust Indicator */}
-          <div className="text-sm text-zinc-500 dark:text-zinc-500 animate-fade-in animation-delay-700">
-            Made in Toronto 🇨🇦 serving the World 🌍
+          <div className="text-sm text-zinc-500 dark:text-zinc-500 opacity-0 animate-fade-in animation-delay-1800">
+            🇨🇦 Made in Toronto, Serving Globally 🌎
           </div>
         </div>
 
         <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-600/0 via-zinc-600/50 to-zinc-600/0 dark:from-zinc-300/0 dark:via-zinc-300/50 dark:to-zinc-300/0 mt-16" />
       </div>
 
-      {/* Section Separator */}
-      <div className="w-screen h-px bg-gradient-to-r from-zinc-600/0 via-zinc-600/50 to-zinc-600/0 dark:from-zinc-300/0 dark:via-zinc-300/50 dark:to-zinc-300/0" />
-
-      {/* Capabilities Section */}
-      <CapabilitiesSection />
-
-      {/* Section Separator */}
-      <div className="w-screen h-px bg-gradient-to-r from-zinc-600/0 via-zinc-600/50 to-zinc-600/0 dark:from-zinc-300/0 dark:via-zinc-300/50 dark:to-zinc-300/0" />
-
-      {/* Credibility Section */}
-      <CredibilitySection />
-
-      {/* Section Separator */}
-      <div className="w-screen h-px bg-gradient-to-r from-zinc-600/0 via-zinc-600/50 to-zinc-600/0 dark:from-zinc-300/0 dark:via-zinc-300/50 dark:to-zinc-300/0" />
-
-      {/* Enhanced Contact Section */}
-      <EnhancedContactSection />
+      {/* Sections Container - Hidden until hero animation completes */}
+      <SectionsWrapper />
     </div>
   );
 }

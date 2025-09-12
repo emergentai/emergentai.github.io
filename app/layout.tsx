@@ -5,14 +5,16 @@ import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 import { ThemeProvider } from "./components/theme-provider";
 
+const title = "Emergent AI - Agents & Bespoke AI Solutions";  
+const description = "AI lab specializing in RAG systems, agentic workflows, customer service AI, and custom AI solutions. Transform your business with practical artificial intelligence."
+
 export const metadata: Metadata = {
   title: {
-    default: "Emergent AI - Toronto AI Lab | RAG, Agentic Workflows & Custom AI Solutions",
+    default: title,
     template: "%s | Emergent AI",
   },
-  description: "Toronto-based AI lab specializing in RAG systems, agentic workflows, customer service AI, and custom AI solutions. Transform your business with practical artificial intelligence.",
+  description: description,
   keywords: [
-    "AI lab Toronto",
     "RAG systems",
     "agentic workflows",
     "customer service AI",
@@ -24,8 +26,8 @@ export const metadata: Metadata = {
     "machine learning solutions"
   ],
   openGraph: {
-    title: "Emergent AI - Toronto AI Lab | RAG, Agentic Workflows & Custom AI Solutions",
-    description: "Toronto-based AI lab specializing in RAG systems, agentic workflows, customer service AI, and custom AI solutions. Transform your business with practical artificial intelligence.",
+    title: title,
+    description: description,
     url: "https://emergentai.ca",
     siteName: "Emergent AI",
     images: [
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
         url: "https://emergentai.ca/og.png",
         width: 1920,
         height: 1080,
-        alt: "Emergent AI - Toronto AI Lab"
+        alt: "Emergent AI - Building custom agents"
       },
     ],
     locale: "en-CA",
@@ -51,8 +53,8 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Emergent AI - Toronto AI Lab",
-    description: "Toronto-based AI lab specializing in RAG systems, agentic workflows, and custom AI solutions.",
+    title: title,
+    description: description,
     card: "summary_large_image",
     images: ["https://emergentai.ca/og.png"],
   },
