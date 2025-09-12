@@ -18,7 +18,7 @@ export default function Home() {
         {/* Main Content Container */}
         <div className="max-w-5xl mx-auto text-center z-10">
           {/* Main Heading */}
-          <h1 className="py-3.5 px-0.5 text-5xl text-transparent duration-1000 bg-black dark:bg-white cursor-default text-edge-outline animate-title font-display sm:text-7xl md:text-8xl lg:text-9xl whitespace-nowrap bg-clip-text mb-8">
+          <h1 className="py-3.5 px-0.5 text-6xl text-transparent duration-1000 bg-black dark:bg-white cursor-default text-edge-outline animate-title font-display sm:text-7xl md:text-8xl lg:text-9xl whitespace-nowrap bg-clip-text mb-8 origin-center">
             emergent ai
           </h1>
 
