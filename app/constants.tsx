@@ -36,7 +36,7 @@ export const AI_CAPABILITIES: CapabilityItem[] = [
     id: 'rag',
     title: 'RAG & Knowledge Systems',
     description: 'Transform your documents into intelligent, searchable knowledge bases that provide instant, accurate answers.',
-    icon: '🧠',
+    icon: 'Brain',
     technologies: ['Vector Databases', 'Embeddings', 'Semantic Search'],
     useCases: ['Document Q&A', 'Knowledge Management', 'Research Assistance']
   },
@@ -44,7 +44,7 @@ export const AI_CAPABILITIES: CapabilityItem[] = [
     id: 'agentic-workflows',
     title: 'Agentic Workflows',
     description: 'Autonomous AI agents that execute complex business processes and make intelligent decisions.',
-    icon: '🤖',
+    icon: 'Bot',
     technologies: ['Multi-Agent Systems', 'Task Planning', 'Decision Trees'],
     useCases: ['Process Automation', 'Intelligent Routing', 'Task Orchestration']
   },
@@ -52,7 +52,7 @@ export const AI_CAPABILITIES: CapabilityItem[] = [
     id: 'customer-service',
     title: 'Customer Service AI',
     description: '24/7 intelligent customer support that handles inquiries and escalates complex issues seamlessly.',
-    icon: '💬',
+    icon: 'MessageCircle',
     technologies: ['Natural Language Processing', 'Intent Recognition', 'Conversation Flow'],
     useCases: ['Live Chat Support', 'Ticket Routing', 'FAQ Automation']
   },
@@ -60,7 +60,7 @@ export const AI_CAPABILITIES: CapabilityItem[] = [
     id: 'business-intelligence',
     title: 'Business Intelligence',
     description: 'Turn raw data into actionable insights with AI-powered analytics and predictive modeling.',
-    icon: '📊',
+    icon: 'BarChart3',
     technologies: ['Data Analysis', 'Predictive Modeling', 'Visualization'],
     useCases: ['Trend Analysis', 'Performance Metrics', 'Decision Support']
   },
@@ -68,7 +68,7 @@ export const AI_CAPABILITIES: CapabilityItem[] = [
     id: 'process-automation',
     title: 'Process Automation',
     description: 'Streamline operations by automating repetitive tasks and document processing workflows.',
-    icon: '⚡',
+    icon: 'Zap',
     technologies: ['Document Processing', 'Workflow Engines', 'API Integration'],
     useCases: ['Document Processing', 'Email Automation', 'Data Entry']
   },
@@ -76,7 +76,7 @@ export const AI_CAPABILITIES: CapabilityItem[] = [
     id: 'custom-solutions',
     title: 'Custom AI Solutions',
     description: 'Tailored AI implementations designed specifically for your unique business requirements.',
-    icon: '🎯',
+    icon: 'Target',
     technologies: ['Custom Models', 'API Development', 'System Integration'],
     useCases: ['Specialized Applications', 'Legacy Integration', 'Scalable Solutions']
   }
@@ -88,25 +88,25 @@ export const CREDIBILITY_ITEMS: CredibilityItem[] = [
     type: 'location',
     title: 'Toronto-Based AI Lab',
     description: 'Local expertise with deep understanding of Canadian business needs and regulations.',
-    icon: '🇨🇦'
+    icon: 'MapPin'
   },
   {
     type: 'expertise',
     title: 'Technical Excellence',
     description: 'Advanced AI/ML capabilities using cutting-edge technologies and proven methodologies.',
-    icon: '🔬'
+    icon: 'Microscope'
   },
   {
     type: 'approach',
     title: 'Business-First Approach',
     description: 'Practical solutions focused on real ROI and measurable business outcomes.',
-    icon: '💼'
+    icon: 'Briefcase'
   },
   {
     type: 'partnership',
     title: 'Partnership Model',
     description: 'Collaborative development with ongoing support and continuous improvement.',
-    icon: '🤝'
+    icon: 'Handshake'
   }
 ];
 
