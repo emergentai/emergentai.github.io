@@ -26,6 +26,8 @@ export default function Particles({
 	const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
 	const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
 	const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
+	const [isDarkMode, setIsDarkMode] = useState(false);
+	const particleColorRef = useRef('255, 255, 255'); // Cache the color
 
 	useEffect(() => {
 		if (canvasRef.current) {
@@ -35,8 +37,25 @@ export default function Particles({
 		animate();
 		window.addEventListener("resize", initCanvas);
 
+		// Check initial theme
+		const checkTheme = () => {
+			const darkMode = document.documentElement.classList.contains('dark');
+			setIsDarkMode(darkMode);
+			// Cache the color to avoid recalculating on every frame
+			particleColorRef.current = darkMode ? '255, 255, 255' : '248, 113, 113';
+		};
+		checkTheme();
+
+		// Watch for theme changes
+		const observer = new MutationObserver(checkTheme);
+		observer.observe(document.documentElement, {
+			attributes: true,
+			attributeFilter: ['class']
+		});
+
 		return () => {
 			window.removeEventListener("resize", initCanvas);
+			observer.disconnect();
 		};
 	}, []);
 
@@ -46,7 +65,7 @@ export default function Particles({
 
 	useEffect(() => {
 		initCanvas();
-	}, [refresh]);
+	}, [refresh, isDarkMode]);
 
 	const initCanvas = () => {
 		resizeCanvas();
@@ -124,7 +143,9 @@ export default function Particles({
 			context.current.translate(translateX, translateY);
 			context.current.beginPath();
 			context.current.arc(x, y, size, 0, 2 * Math.PI);
-			context.current.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+
+			// Use cached color - no function call needed
+			context.current.fillStyle = `rgba(${particleColorRef.current}, ${alpha})`;
 			context.current.fill();
 			context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
 
