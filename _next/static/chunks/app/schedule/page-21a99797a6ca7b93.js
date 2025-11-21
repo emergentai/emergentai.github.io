@@ -1,0 +1,9 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[681],{8306:function(e,t,n){Promise.resolve().then(n.bind(n,8892))},8892:function(e,t,n){"use strict";n.r(t),n.d(t,{default:function(){return Contact}});var r=n(7437),c=n(2265);function Contact(){return(0,c.useEffect)(()=>{window.location.href="https://calendly.com/emergentai/intro"},[]),(0,r.jsx)("div",{className:"bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 min-h-screen flex items-center justify-center",children:(0,r.jsxs)("div",{className:"text-center",children:[(0,r.jsx)("p",{className:"text-zinc-400 mb-4",children:"Redirecting to schedule a meeting..."}),(0,r.jsxs)("p",{className:"text-sm text-zinc-500",children:["If you're not redirected automatically,",(0,r.jsx)("a",{href:"https://calendly.com/emergentai/intro",className:"text-zinc-300 hover:text-white ml-1 underline",children:"click here"})]})]})})}},622:function(e,t,n){"use strict";/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var r=n(2265),c=Symbol.for("react.element"),i=Symbol.for("react.fragment"),o=Object.prototype.hasOwnProperty,s=r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,a={key:!0,ref:!0,__self:!0,__source:!0};function q(e,t,n){var r,i={},l=null,f=null;for(r in void 0!==n&&(l=""+n),void 0!==t.key&&(l=""+t.key),void 0!==t.ref&&(f=t.ref),t)o.call(t,r)&&!a.hasOwnProperty(r)&&(i[r]=t[r]);if(e&&e.defaultProps)for(r in t=e.defaultProps)void 0===i[r]&&(i[r]=t[r]);return{$$typeof:c,type:e,key:l,ref:f,props:i,_owner:s.current}}t.Fragment=i,t.jsx=q,t.jsxs=q},7437:function(e,t,n){"use strict";e.exports=n(622)}},function(e){e.O(0,[971,472,744],function(){return e(e.s=8306)}),_N_E=e.O()}]);
