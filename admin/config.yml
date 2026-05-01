@@ -1,0 +1,99 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+#
+# Matches Contentlayer `Blog` (contentlayer.config.js) and real frontmatter in
+# content/blog/*.mdx — see content/blog/three-year-check.mdx for the canonical shape:
+#
+#   title, description, category, author, readTime, published, date
+#   then body (MDX below the ---)
+
+backend:
+  name: github
+  repo: emergentai/emergentai.github.io-private
+
+media_folder: public/media
+public_folder: /media
+
+collections:
+  - name: blog
+    label: Blog posts
+    label_singular: Blog post
+    folder: content/blog
+    extension: mdx
+    format: frontmatter
+    # Filename = URL slug (three-year-check.mdx → /blog/three-year-check)
+    slug: "{{slug}}"
+    identifier_field: title
+    create: true
+    fields:
+      # Order mirrors three-year-check.mdx frontmatter
+      - label: Title
+        name: title
+        widget: string
+        hint: "Display title (quotes in YAML are fine for apostrophes)."
+
+      - label: Description
+        name: description
+        widget: text
+        hint: "Short excerpt for listings and SEO (matches Contentlayer `description`)."
+
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - { label: Business, value: business }
+          - { label: Technology, value: technology }
+        required: true
+
+      - label: Author
+        name: author
+        widget: string
+        required: false
+        default: "Emergent AI Team"
+        hint: "Plain text, e.g. Emergent AI Team"
+
+      - label: Read time (minutes)
+        name: readTime
+        widget: number
+        min: 1
+        required: false
+        default: 5
+        hint: "Minutes to read (three-year-check.mdx uses 5)."
+
+      - label: Published
+        name: published
+        widget: boolean
+        default: false
+        hint: "Set true when the post should appear on the site."
+
+      - label: Date
+        name: date
+        widget: datetime
+        type: datetime
+        required: true
+        hint: "Publication datetime (required; stored as ISO in MDX, e.g. 2025-11-21T05:00:00.000Z)."
+
+      - label: Body
+        name: body
+        widget: markdown
+        hint: "Markdown below frontmatter. Raw HTML is allowed (e.g. <a href=\"/assessment\">…</a>)."
+
+    sortable_fields:
+      fields: [date, title, category, published]
+      default:
+        field: date
+        direction: desc
+
+    # Sveltia: use `date | date('…')` for readable dates (raw `{{date}}` is unreliable in summaries).
+    # `published | ternary('', …)` → when unpublished, prefix with `Draft ·` (see three-year-check: published: true).
+    summary: "{{published | ternary('', '`Draft` · ')}}**{{title}}** · _{{category}}_ · {{date | date('MMM D, YYYY')}} · {{readTime}} min read"
+
+    view_filters:
+      filters:
+        - name: drafts
+          label: Drafts
+          field: published
+          pattern: false
+        - name: isPublished
+          label: Published
+          field: published
+          pattern: true
